@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './style.css'
 
+
 export default function RandomColor() {
   const [typeOfColor, setTypeOfColor] = useState("hex");
   const [color, setColor] = useState("#000000");
@@ -19,6 +20,7 @@ export default function RandomColor() {
     console.log(hexColor);
     setColor(hexColor);
   };
+
 
   const handleCreateRandomRgbColor = () => {
     const [r, g, b] = [
@@ -41,7 +43,7 @@ export default function RandomColor() {
         <button onClick={() => setTypeOfColor("rgb")}>Creater RGB Color</button>
         <button
           onClick={ 
-            
+
             typeOfColor === "hex"
               ? handleCreateRandomHexColor
               : handleCreateRandomRgbColor
@@ -52,6 +54,7 @@ export default function RandomColor() {
       </div>
 
       <div
+
         style={{
           display: "flex",
           justifyContent: "center",
