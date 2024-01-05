@@ -40,7 +40,8 @@ export default function RandomColor() {
         <button onClick={() => setTypeOfColor("hex")}>Create Hex color</button>
         <button onClick={() => setTypeOfColor("rgb")}>Creater RGB Color</button>
         <button
-          onClick={
+          onClick={ 
+            
             typeOfColor === "hex"
               ? handleCreateRandomHexColor
               : handleCreateRandomRgbColor
