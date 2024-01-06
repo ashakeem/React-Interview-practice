@@ -6,13 +6,13 @@ const StarRating = ({ numStars = 5 }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
-  function handleMouseEnter(currentIndex) {
-    console.log(currentIndex);
+  function handleHover(currentIndex) {
+    // console.log(currentIndex);
     setHover(currentIndex);
   }
 
   function handleClick(currentIndex) {
-    console.log(currentIndex);
+    // console.log(currentIndex);
     setRating(currentIndex);
   }
 
@@ -30,7 +30,7 @@ const StarRating = ({ numStars = 5 }) => {
             key={index}
             onClick={() => handleClick(index)}
             onMouseLeave={() => handleLeave()}
-            onMouseMove={() => handleMouseEnter(index)}
+            onMouseMove={() => handleHover(index)}
             size={40}
           />
         );
